@@ -40,6 +40,15 @@ Then configure the rules you want to use under the rules section.
 }
 ```
 
+You can also extend the recommended configuration which will raise errors when
+the ABC Size of a function exceeds 15.
+
+```json
+{
+  "extends": ["plugin:abcsize/recommended"]
+}
+```
+
 ## Supported Rules
 
 * abcsize
