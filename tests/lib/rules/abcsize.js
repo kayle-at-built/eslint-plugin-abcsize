@@ -16,6 +16,7 @@ var rule = require("../../../lib/rules/abcsize"),
 
 
 const a0b0c0 = fs.readFileSync(`${__dirname}/../fixtures/a-0-b-0-c-0.js`, {encoding: 'utf8', flag: 'r'});
+const a0b0c0Math = fs.readFileSync(`${__dirname}/../fixtures/a-0-b-0-c-0-math.js`, {encoding: 'utf8', flag: 'r'});
 const a0b0c1if = fs.readFileSync(`${__dirname}/../fixtures/a-0-b-0-c-1-if.js`, {encoding: 'utf8', flag: 'r'});
 const a0b0c2ifelse = fs.readFileSync(`${__dirname}/../fixtures/a-0-b-0-c-2-if-else.js`, {encoding: 'utf8', flag: 'r'});
 const a0b0c21 = fs.readFileSync(`${__dirname}/../fixtures/a-0-b-1-c-21.js`, {encoding: 'utf8', flag: 'r'});
@@ -41,6 +42,10 @@ ruleTester.run("abcsize", rule, {
     valid: [
         {
             code: a0b0c0,
+            options: [{max:0}]
+        },
+        {
+            code: a0b0c0Math,
             options: [{max:0}]
         },
         {
